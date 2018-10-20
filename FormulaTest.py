@@ -19,7 +19,7 @@ df['OC_PCT']=(df['Adj. Open']-df['Adj. Close'])/df['Adj. Close']*100.0
 # Assigning the Adj. Close column to the variable forcast_col
 forcast_col = 'Adj. Close'
 
-# !
+# replace nand data with -99999 it will be treated as an outlier
 df.fillna(-99999, inplace=True)
 
 #!
