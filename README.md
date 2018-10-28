@@ -14,7 +14,7 @@ This Repo was created to learn and practice Linear Regression with Python and va
 - Y = a + bX + u....
 
 # Quandl
-- Quandl is a data source for for financial and economic data that can be used for research.
+- Quandl is a data source for for financial and economic data that can be used for investment purposes.
 This data can be retrieved via the quandl.get call. In order for Quandl to work you will need the Pandas and Numpy
 libraries. Quandl allows for up to 50 anonymous calls per day and up to 500 calls for registered free users.In order
 to use Quandls API with python you will need to use the following code **quandl.ApiConfig.api_key = "YOUR_KEY_HERE"**.
