@@ -1,7 +1,6 @@
 # Linear-Regression
 This Repo was created to learn and practice Linear Regression with Python and various libraries. Academic purposes only.
-
-# Sources and refrences used to learn and practice
+#Sources and refrences used to learn and practice
 https://docs.quandl.com/docs/python
 http://pandas.pydata.org/pandas-docs/stable/
 http://scikit-learn.org/stable/documentation.html
@@ -13,7 +12,7 @@ https://www.youtube.com/watch?v=zPG4NjIkCjc
 # What is Linear Regression?
 - Y = a + bX + u....
 
-# Quandl
+#Quandl
 - Quandl is a data source for for financial and economic data that can be used for investment purposes.
 This data can be retrieved via the quandl.get call. In order for Quandl to work you will need the Pandas and Numpy
 libraries. Quandl allows for up to 50 anonymous calls per day and up to 500 calls for registered free users.In order
@@ -21,7 +20,7 @@ to use Quandls API with python you will need to use the following code **quandl.
 Registered free users will receive their own individual api key that would be inserted at the  "YOUR_KEY_HERE" part.
 - In my program you will see me using the quandl.get method to retrieve stock and bitcoin data. 
 
-# Pandas
+#Pandas
 - Pandas ,short for Python Data Analysis Library, is library used for data manipulation and analysis. Pandas uses a Python
 object called "data frame" to display rows and columns of data. The advantage of  a data frame as opposed to a dictionary or
 a csv file is that a data frame is easier to read and manipulate. 
