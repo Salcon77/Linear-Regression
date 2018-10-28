@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=zPG4NjIkCjc
 
 # What is Linear Regression?
 - Y = a + bX + u....
+
 #Quandl
 - Quandl is a data source for for financial and economic data that can be used for investment purposes.
 This data can be retrieved via the quandl.get call. In order for Quandl to work you will need the Pandas and Numpy
@@ -27,12 +28,13 @@ a csv file is that a data frame is easier to read and manipulate.
 df = quandl.get() first sets up the df to display all columns and rows from the quandl data being retrieved.  
 df = df[[columns]] filter the columns you want to display and remove the ones you dont 
 df[""new column"] =  creates and new column and assigns to to whatever data or calculation you want to display.
-- There are more ways I use Pandas to display, read, and manipulate data.For more detailed instructions on everything the
+- There are more ways I use Pandas to display, read, and manipulate data. For more detailed instructions on everything the
 Pandas Library can do please see the links provided in the **Sources and References**.
 
 # NumPy
 - A basic python Library that allows for the creation of multi-dimensional arrays in python along with mathematical functions 
-such as linear algebra. Numpy arrays have fixed sizes and all the elements in a numpy array must be of the same type.
+such as linear algebra.
+ - Note that Numpy arrays have fixed sizes and all the elements in a numpy array must be of the same type.
 - Throughout the program you will see np.array which is being used to create numpy array. 
 
 # Scikit-learn
