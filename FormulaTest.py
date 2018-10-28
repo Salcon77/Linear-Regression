@@ -15,10 +15,10 @@ df = quandl.get('WIKI/GOOGL')
 # Display only the following columns
 df = df[["Adj. Open", "Adj. High", "Adj. Low", "Adj. Close"]]
 
-# Create a column that displays the percent change from the the highest price of the day and the lowest price of the day
+# Percent change from the the highest price of the day and the lowest price of the day
 df['HL_PCT'] = (df['Adj. High']-df['Adj. Low'])/df['Adj. Low']*100.0
 
-# Create a column that displays the percent change from the opening price of the day and the closing price of the day
+# Percent change from the opening price of the day and the closing price of the day
 df['OC_PCT']=(df['Adj. Open']-df['Adj. Close'])/df['Adj. Close']*100.0
 
 # Assigning the Adj. Close column to the variable forcast_col
@@ -27,15 +27,13 @@ forcast_col = 'Adj. Close'
 # replace nand data with -99999 it will be treated as an outlier
 df.fillna(-99999, inplace=True)
 
-# set forcast_out to be a 1% of the len of the dataframe.
+# set forcast_out to be a 1% of the len of the dataframe. A dataframe of 100 would have 1% length of 1.
 forcast_out = int(math.ceil(0.01*len(df)))
 
-# create a label column that returns forcasted values shifted by forcast_out days ahead
+# create a label column that returns forcasted values shifted by x days ahead
 df['label']=df[forcast_col].shift(-forcast_out)
 df.dropna(inplace=True)
 
-
-# SELF NOTE: read more into scikit-learn and its built in functions
 x = np.array(df.drop(['label'],1))
 y = np.array(df['label'])
 x= preprocessing.scale(x)
