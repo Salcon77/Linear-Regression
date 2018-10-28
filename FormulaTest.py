@@ -5,7 +5,7 @@ import numpy as np
 from sklearn import preprocessing, model_selection,svm
 from sklearn.linear_model import LinearRegression
 
-
+# Allows pandas to display up to 10 columns fo data to the console
 pd.set_option('display.max_columns', 10)
 
 
@@ -38,8 +38,11 @@ df.dropna(inplace=True)
 # SELF NOTE: read more into scikit-learn and its built in functions
 x = np.array(df.drop(['label'],1))
 y = np.array(df['label'])
+
 x= preprocessing.scale(x)
+
 df.dropna(inplace=True)
+
 y = np.array(df['label'])
 
 
@@ -48,6 +51,7 @@ x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y, test_s
 clf = LinearRegression()
 clf.fit(x_train, y_train)
 clf.score(x_test, y_test)
+
 accuracy = clf.score(x_test,y_test)
 
 print(accuracy)

@@ -8,4 +8,8 @@ df['HL_PCT'] = (df['High']-df['Low'])/df['Low']*100.0
 
 #df = df[['High', 'Low', 'HL_PCT', 'Volume']]
 
+"""
+Find another quandl source of data with daily closing price
+"""
+
 print(df.tail())
